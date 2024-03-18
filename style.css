@@ -1,0 +1,280 @@
+/*!
+ * Theme Name: 		   planty
+ * Template:           oceanwp
+ * Version:            3.5.3
+ * Tested up to:       6.4.2
+ * Requires at least:  5.6
+ * Requires PHP:       7.2
+ * Author:             Isabelle_07
+ * Author URI:         https://localhost/plantyb/
+ * Description:        site web boissons énergisantes à base de plantes
+ * Tags:               boisson, énergie, plantes
+ * License: GNU General Public License v2.0 or later
+ * License URI: https://www.gnu.org/licenses/gpl-2.0.html
+ */
+
+
+
+*{
+    font-family: 'Syne', sans-serif;
+}
+
+/*GENERAL*/
+.site-main{ 
+	width:100%;
+	max-width: 1440px;
+	min-width:1024px;
+	margin-left:auto;
+	margin-right: auto;
+}
+
+
+
+/***HEADER***/
+
+.navform{ /* Conteneur du header*/
+	width: 100%;
+  	height: 80px;
+	background-color:#ffff;
+}
+
+.nav-bar{ /* navigation */
+	display: flex;
+    justify-content:space-between;
+	height:auto;
+	padding:0;
+}
+	
+.logo{
+	width: 201px;
+	padding-top:30px;
+	margin-left:20px;
+}
+
+.menu-class-container{ /* Menu */
+   display: flex;
+   justify-content:space-between;
+   list-style:none;
+   height: 80px;
+   width:100%;
+   margin:0;
+}
+
+.nav-item{ /*affichage et dimension de la navigation*/
+	display:flex;
+	height:80px;
+}
+
+.nav-link{ /*liens des items*/
+    display:flex;
+    margin-right:40px;
+    color:#000000;
+	font-weight:bold;
+	line-height:80px;
+	text-decoration:none;
+}
+
+.nav-link:hover{ /*survol des items*/
+   color: #000000; 
+   text-decoration:none;
+}
+
+.bouton-menu { /*item Commander*/
+	background-color:#dc9f96;
+	padding-left:30px;
+	line-height:80px;
+	text-decoration: none;
+}
+
+.bouton-menu a{ /* survol item Commander*/
+	color:#ffff;
+	text-decoration:none;
+}
+
+
+
+/***FORMULAIRE***/
+
+.contenu{ /* affichage du conteneur du formulaire*/
+    display:flex;
+	font-size: 17px;
+	grid-gap:100px;
+	margin-top:70px;
+}
+
+.informations, .livraison { /* largeur "Vos information"s et de la div "Livraison"*/
+    width: 100%;
+    height: auto;
+}
+
+.informations::after { /* trait vertical entre la div "Vos informations" et la div "Livraison"*/
+    content: '';
+    position: absolute;
+    top: 180px;
+    bottom: 165px;
+    left: 50%; /* Place la ligne à la moitié de la div informations */
+    width: 1px; /* Epaisseur de la ligne */
+    background-color: #fff; /* Couleur de la ligne */
+    transform: translateX(-50%); /* Centre la ligne verticalement */
+}
+
+.infos{ /*couleur et taille des mots "Vos informations" et "Livraison"*/
+	color:white; 
+	font-size:30px;
+	font-weight:700;
+}
+
+.wpcf7-form-control{ /* Dimension du contenant des labels*/
+	width: 383px; 
+	height:71px;
+}
+
+.form-input-number{ /*affichage et placement des sélecteurs de fruits*/
+	display:flex; 
+	flex-direction:row;
+	justify-content:space-between;
+	margin-left:70px;
+	gap: 170px;
+}
+
+.button-style{ /*position du bouton "Commander"*/
+	margin-left:200px;
+}
+
+
+
+/***FOOTER***/
+
+#menu-footer{ 
+	display:flex;
+	background-color:#ffff;
+	justify-content:center;
+	height:80px;
+}
+
+
+
+
+/******** @MEDIA_QUERIES ********/
+
+/******TABLETTES******/
+    
+@media only screen and (max-width:768px) { /* écrans tablettse max 768px et en-deça*/
+	
+	/***FORMULAIRE***/
+   	
+	.contenu{ /* affichage du conteneur */
+		display:flex;
+		flex-direction:column;
+		border-top: solid 1px #ffff;
+		padding-top:20px;
+	}
+
+	.informations::after { /* retrait de la ligne verticale */
+		display:none;
+	}
+
+	.form-input-number{ /*affichage et placement des sélecteurs de fruits*/
+		display:flex;
+		flex-direction:row;
+		justify-content:space-between;
+		margin-left:0px;
+		gap: 135px;
+	}
+
+	.button-style{ /*position du bouton "Commander"*/
+		margin-left:-40px;
+	}
+}
+
+
+/******MOBILES******/
+
+@media only screen and (max-width:320px){ /* écrans mobiles max 320px et en-deça*/
+
+	/***HEADER***/
+	#menu-header{
+		display:flex;
+		flex-direction:row;
+		left:0;
+		position:absolute;
+		background-color: rgba(255,255,255,0.30);
+		width:100%;
+	}
+
+	.nav-link{
+		display:flex;
+		margin:20px;
+		color:black;
+		font-weight:bold;
+		line-height:auto;
+	}
+
+	.logo{
+		width: 50%;
+		padding-top:15px;
+		margin-left:22px;
+		position: relative; /* Position relative pour utiliser z-index */
+   		z-index: 2; /* logo en premier plan */
+	}
+	
+	.nous-rencontrer{ /* Positionnement et déplacement de l'item "Nous Rencontrer" vers la gauche*/
+		display:flex;
+		position: relative;
+		left:7px;
+		white-space: nowrap;
+		transition: right 1s, transform 1s;
+		
+	}
+
+	.bouton-menu{ /* Positionnement et déplacement de l'item "Commander" vers la droite*/
+		display:flex;
+		position: absolute;
+		right:7px;
+		transition: right 1s, transform 1s;
+		white-space: nowrap;
+		background-color: transparent;
+		color:#000000;
+	}
+
+	.bouton-menu a{ /* survol item Commander*/
+		color:#000000;
+	}
+
+	.admin{ /*retrait de l'item "admin"*/
+		display: none;
+	}
+	
+
+	/***FORMULAIRE***/
+	.form-input-number{ /*affichage et placement des sélecteurs de fruits*/
+		display:flex;
+		flex-direction:row;
+		justify-content:space-between;
+		margin-left:-1px;
+		gap: 30px;
+	}
+
+	.infos{  /*couleur et taille des mots "Vos informations" et "Livraison"*/
+		color:white;
+		font-size:22px;
+		font-weight:700;
+	}
+
+	.informations::after { /*retrait de lla ligne verrticale*/
+		display:none;
+	}
+
+	.button-style{
+		padding-right:110px;		
+	}
+
+
+	/***FOOTER***/
+	#menu-footer{
+		display:flex;
+		background-color:#ffff;
+		justify-content:center;
+		height:100px;
+	}
+}
