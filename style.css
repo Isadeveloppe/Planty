@@ -29,8 +29,7 @@
 }
 
 
-
-/***HEADER***/
+/*****HEADER*****/
 
 .navform{ /* Conteneur du header*/
 	width: 100%;
@@ -92,8 +91,7 @@
 }
 
 
-
-/***FORMULAIRE***/
+/*****FORMULAIRE*****/
 
 .contenu{ /* affichage du conteneur du formulaire*/
     display:flex;
@@ -143,7 +141,7 @@
 
 
 
-/***FOOTER***/
+/*****FOOTER*****/
 
 #menu-footer{ 
 	display:flex;
@@ -155,13 +153,13 @@
 
 
 
-/******** @MEDIA_QUERIES ********/
+/************ @MEDIA_QUERIES ************/
 
 /******TABLETTES******/
     
-@media only screen and (max-width:768px) { /* écrans tablettse max 768px et en-deça*/
-	
-	/***FORMULAIRE***/
+@media only screen and (max-width:1024px) { /* écrans tablettse max 768px et en-deça*/
+
+	/****FORMULAIRE****/
    	
 	.contenu{ /* affichage du conteneur */
 		display:flex;
@@ -192,7 +190,7 @@
 
 @media only screen and (max-width:320px){ /* écrans mobiles max 320px et en-deça*/
 
-	/***HEADER***/
+	/****HEADER****/
 	#menu-header{
 		display:flex;
 		flex-direction:row;
@@ -244,9 +242,9 @@
 	.admin{ /*retrait de l'item "admin"*/
 		display: none;
 	}
-	
 
-	/***FORMULAIRE***/
+	
+	/****FORMULAIRE****/
 	.form-input-number{ /*affichage et placement des sélecteurs de fruits*/
 		display:flex;
 		flex-direction:row;
@@ -270,7 +268,7 @@
 	}
 
 
-	/***FOOTER***/
+	/****FOOTER****/
 	#menu-footer{
 		display:flex;
 		background-color:#ffff;
